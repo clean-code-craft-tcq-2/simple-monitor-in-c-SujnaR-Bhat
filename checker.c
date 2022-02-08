@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
-#include "checker.h"
+
 
 /* MACROS */
 #define TEMP_MIN            0
