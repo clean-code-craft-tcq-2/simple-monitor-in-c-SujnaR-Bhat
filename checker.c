@@ -11,6 +11,7 @@
 #define CHARGERATE_MAX      0.8
 
 
+/* Check for temerature within range */
 int temperature_range (float temperature)
 {
    if(temperature < 0 || temperature > 45) 
@@ -21,25 +22,30 @@ int temperature_range (float temperature)
       return 1;
 }
   
+
+/* check for soc within range */
 int soc_range(float soc)
 {
   if(soc < 20 || soc > 80) 
   {
     printf("State of Charge out of range!\n");
     return 0;
-}
+``}
    return 1;
+}
   
-  int chargerate_range (float chargeRate)
+/* chekc for chargerate within range */
+ int chargerate_range (float chargeRate)
   {
-    if(chargeRate > 0.8)
+     if(chargeRate > 0.8)
     {
       printf("Charge Rate out of range!\n");
       return 0;
     }
       return 1;
-}
+  }
 
+/* detect if battery is ok and return status  */
 int batteryIsOk(float temperature, float soc, float chargeRate) 
 {
    int status ;
@@ -48,6 +54,7 @@ int batteryIsOk(float temperature, float soc, float chargeRate)
    return (status);
 }
    
+
 int main() 
 {
   assert(batteryIsOk(25, 70, 0.7));
