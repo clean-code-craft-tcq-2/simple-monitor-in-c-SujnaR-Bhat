@@ -44,7 +44,7 @@ int batteryIsOk(float temperature, float soc, float chargeRate)
 {
    int status ;
     
-   status = (temperature_range(temperature)) && (soc_range(soc)) && (chargerate_range(chargerate)) ;
+   status = (temperature_range(temperature)) && (soc_range(soc)) && (chargerate_range(chargeRate)) ;
    return (status);
 }
    
