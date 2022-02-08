@@ -40,8 +40,16 @@ int soc_range(float soc)
       return 1;
 }
 
-
-int main() {
+int batteryIsOk(float temperature, float soc, float chargeRate) 
+{
+   int status ;
+    
+   status = (temperature_range(temperature)) && (soc_range(soc)) && (chargerate_range(chargerate)) ;
+   return (status);
+}
+   
+int main() 
+{
   assert(batteryIsOk(25, 70, 0.7));
   assert(!batteryIsOk(50, 85, 0));
 }
