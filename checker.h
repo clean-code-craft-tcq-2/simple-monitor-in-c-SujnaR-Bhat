@@ -1,6 +1,6 @@
-#define TEMP_MIN            
-#define TEMP_MAX
-#define SOC_MIN
-#define SOC_MAX
-#define CHARGERATE_MIN
-#define CHARGERATE_MAX
+#define TEMP_MIN            0
+#define TEMP_MAX            45
+#define SOC_MIN             20
+#define SOC_MAX             80
+#define CHARGERATE_MIN      0.0
+#define CHARGERATE_MAX      0.8
