@@ -30,7 +30,7 @@ int soc_range(float soc)
   {
     printf("State of Charge out of range!\n");
     return 0;
-``}
+  }
    return 1;
 }
   
