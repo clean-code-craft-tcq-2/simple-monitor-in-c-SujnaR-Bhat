@@ -60,4 +60,5 @@ int main()
   assert(batteryIsOk(25, 70, 0.7));
   assert(!batteryIsOk(50, 85, 0));
   assert(!batteryIsOk(55, 30, 0.9));
+   assert(!batteryIsOk(90, 65, 0.5));
 }
