@@ -10,13 +10,16 @@
 #define CHARGERATE_MIN      0.0
 #define CHARGERATE_MAX      0.8
 
+void PrintOnConsole( char message[]){
+  printf(" %s is out of range!\n", message);
+}
 
 /* Check for temerature within range */
 int temperature_range (float temperature)
 {
    if(temperature < TEMP_MIN || temperature > TEMP_MAX) 
    {
-       printf("Temperature out of range!\n");
+       PrintOnConsole("Temperature");
       return 0;
    }
       return 1;
@@ -28,7 +31,7 @@ int soc_range(float soc)
 {
   if(soc < SOC_MIN || soc > SOC_MAX) 
   {
-    printf("State of Charge out of range!\n");
+    PrintOnConsole("State of Charge");
     return 0;
   }
    return 1;
@@ -39,7 +42,7 @@ int soc_range(float soc)
   {
      if(chargeRate > CHARGERATE_MAX)
     {
-      printf("Charge Rate out of range!\n");
+      PrintOnConsole("Charge Rate ");
       return 0;
     }
       return 1;
