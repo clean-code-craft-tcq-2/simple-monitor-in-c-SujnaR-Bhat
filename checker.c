@@ -14,7 +14,7 @@
 /* Check for temerature within range */
 int temperature_range (float temperature)
 {
-   if(temperature < 0 || temperature > 45) 
+   if(temperature < TEMP_MIN || temperature > TEMP_MAX) 
    {
        printf("Temperature out of range!\n");
       return 0;
@@ -26,7 +26,7 @@ int temperature_range (float temperature)
 /* check for soc within range */
 int soc_range(float soc)
 {
-  if(soc < 20 || soc > 80) 
+  if(soc < SOC_MIN || soc > SOC_MAX) 
   {
     printf("State of Charge out of range!\n");
     return 0;
@@ -37,7 +37,7 @@ int soc_range(float soc)
 /* chekc for chargerate within range */
  int chargerate_range (float chargeRate)
   {
-     if(chargeRate > 0.8)
+     if(chargeRate > CHARGERATE_MAX)
     {
       printf("Charge Rate out of range!\n");
       return 0;
